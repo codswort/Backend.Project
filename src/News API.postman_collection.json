@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "2d5d7db6-c2f2-4d37-a401-11c9df12f18a",
+		"name": "News API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41619962"
+	},
+	"item": [
+		{
+			"name": "All the news about Linux",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=Linux&apiKey=84dea3c1e78a4f10a5cb988db05c7943",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Linux"
+						},
+						{
+							"key": "apiKey",
+							"value": "84dea3c1e78a4f10a5cb988db05c7943",
+							"description": "84dea3c1e78a4f10a5cb988db05c7943"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "About development for 15 days",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var today = new Date();\r",
+							"\r",
+							"var pastDate = new Date();\r",
+							"pastDate.setDate(today.getDate() - 15);\r",
+							"\r",
+							"var formattedPastDate = pastDate.toISOString().split('T')[0];\r",
+							"\r",
+							"pm.environment.set(\"today\", today.toISOString().split('T')[0]);\r",
+							"pm.environment.set(\"pastDate\", formattedPastDate);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=development&apiKey=84dea3c1e78a4f10a5cb988db05c7943&language=ru&from={{today}}&to={{pastDate}}",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "development"
+						},
+						{
+							"key": "apiKey",
+							"value": "84dea3c1e78a4f10a5cb988db05c7943"
+						},
+						{
+							"key": "language",
+							"value": "ru"
+						},
+						{
+							"key": "from",
+							"value": "{{today}}"
+						},
+						{
+							"key": "to",
+							"value": "{{pastDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "About Linux on page 3",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var today = new Date();\r",
+							"\r",
+							"var pastDate = new Date();\r",
+							"pastDate.setDate(today.getDate() - 15);\r",
+							"\r",
+							"var formattedPastDate = pastDate.toISOString().split('T')[0];\r",
+							"\r",
+							"pm.environment.set(\"today\", today.toISOString().split('T')[0]);\r",
+							"pm.environment.set(\"pastDate\", formattedPastDate);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=Linux&apiKey=84dea3c1e78a4f10a5cb988db05c7943&page=3&pageSize=10&language=ru",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Linux"
+						},
+						{
+							"key": "apiKey",
+							"value": "84dea3c1e78a4f10a5cb988db05c7943"
+						},
+						{
+							"key": "page",
+							"value": "3"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "language",
+							"value": "ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "About science",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var today = new Date();\r",
+							"\r",
+							"var pastDate = new Date();\r",
+							"pastDate.setDate(today.getDate() - 15);\r",
+							"\r",
+							"var formattedPastDate = pastDate.toISOString().split('T')[0];\r",
+							"\r",
+							"pm.environment.set(\"today\", today.toISOString().split('T')[0]);\r",
+							"pm.environment.set(\"pastDate\", formattedPastDate);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=science&apiKey=84dea3c1e78a4f10a5cb988db05c7943&language=ru&fields=title",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "science"
+						},
+						{
+							"key": "apiKey",
+							"value": "84dea3c1e78a4f10a5cb988db05c7943"
+						},
+						{
+							"key": "language",
+							"value": "ru"
+						},
+						{
+							"key": "fields",
+							"value": "title"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

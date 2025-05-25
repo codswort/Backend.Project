@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "9fdea9b2-24e2-4831-a338-8c7c6b9ac346",
+		"name": "Developer Tools",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41619962"
+	},
+	"item": [
+		{
+			"name": "https://hh.ru/shards/vacancy/related_vacancies?vacancyId=116197385&page=1&searchSessionId=12334df0-951c-4cd1-ba19-ab4fee42d9fc",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9,ru;q=0.8"
+					},
+					{
+						"key": "cookie",
+						"value": "hhuid=1SaTcDDygy74GWXgTG8yeQ--; _ym_uid=1709198450631137211; hhtoken=SvSTpicIFGYmWC4RJYFXPk4Faxih; hhul=6ec196c6702ca247b883cc1557b5f0bf227f8be34a1a3b08a16107e78cc282e0; _ym_d=1728997820; __ddg9_=166.1.20.245; __ddg1_=hle2XcarD1xFHROfKzhC; _xsrf=590a367477fcd143324b6672533add17; regions=1; region_clarified=NOT_SET; display=desktop; crypted_hhuid=EE37C05B75F025FA094B0899DE90ADAB494E732BBEB87503476A6548C8962E2F; GMT=3; iap.uid=6dcde9cab32847b089a39cd22eed6a02; tmr_lvid=aef66872cfbf6e7d63e30b50c2ce05f7; tmr_lvidTS=1738441447136; _ym_isad=2; _ym_visorc=w; domain_sid=Bl5YAOPt9enA9wzaOjzsy%3A1738441451512; uxs_uid=d4bd2570-d6e3-11ee-a0f2-539f0230782c; supernova_user_type=applicant; cookie_policy_agreement=true; hhrole=applicant; crypted_id=CFB4365E136D65E22B6801452C0A3F19A5471C6F722104504734B32F0D03E9F8; total_searches=1; __zzatgib-w-hh=MDA0dC0pXB4IH04NIH5rL2R7RSRfHDx1ZS91cDApO2kfYkgWJEhXCHktTEV+clZRPREVbnQpc1xxa05mTGIiRVkKayELUTQ1ZhBKT01HMzg/aH0eVBw5VREPFhI2FyMSfm4rUwsMY0ZCcXYvN1dhMA8WEU1HDTJoUXtMZxUTRkIce3AtLGxzVycyOSdQfyIKay8LFHdwKlELDV4vPV87Xn0wVioTSyk1IBlAZ0pINF0fQUtEIHIzd3QwPm0hY0hhKERZUAghC1VIM1hBEXUmCQs6Lm0tOhlRfRpdehIXQWdST0NdLSJxURR5DiplMy1oIGNNXCJEEAh9J0pFNHBUVDo9Y0NJKjBbP2UjGUdZUzVRP0FaW1Q4NmdBEXUmCQg3LGBwVxlRExpceEdXeiwcGXtvJFcQDF9ASmllbQwtUlFRS2IPHxo0aQteTA==wK4kWw==; tmr_detect=0%7C1738441894039; device_magritte_breakpoint=xs; device_breakpoint=xs; cfidsgib-w-hh=avUXBA9ou6nblJKkcwZEmCY5fEfZ2L5MAx6KveSGvEchqCxou0byV1GLuoDVzHorE9/LdFD1NyAWD1jGEz0fvXk8z9eZ6M+5SuX7rxNVILmQ0hvGyFf8AoturhHa54JMBvf/xKiR+Y60YtTTfVqVddKVr7cadCjMnRU0tA==; gsscgib-w-hh=EEvPhJd7Ar9GOscVHFxyPQWcXZ2I0WkwQ/kiJBbuGRRzHBlSpR/BJSHujoJY3Ig1RdrfhTWpUDPwwgmr4CcvfU1lrlOsvF0k8PDjOU0fMpHE9SrY1Sey1LTDr7taWYWFYmdUpkl9WVIr2V3vJRUnPT1XTucRUzc2En/2ceiAwGV1jgTul6b8HisP3Eygwbi1lPgufGp6NTya8UoKqGx+tH4kxLtrVmzjgbXjOYcTf3Ug2ntCC2Gwjo9GAMXpinV67x8jHNA=; gsscgib-w-hh=Z5DnuQ6zGp1izVaM4aWZlD3cytEJltt8Wtg6m8ow/r2aU3bmC6LCGha/m0HrJvvyk+qW0bO+Re7W7OGeScNCL5h9sHXNA2q0iI/P5sqfgy0mWzhMaB2efcDM08tpq/H0dK38NyT3P9ahqVfpTtNPMroySEXCxn8sOmV0kCMVDKUI6tDQxKYFeBsLjUnAiC7dWlgDHx0pI1h+9pMgB6aZfDPg27OFdkBJwzyHWLRBlpT4kamAX/CcltgsCJQtJl1M/zF7rrE=; cfidsgib-w-hh=hAzFd+ASQYuuUjjLpFNyMKkJCts18rhkyFztaFik2S5w211h9cEUb6sloskmxWBZjdgKqiqEcTZh2KoECGGjIB5yTv19xNDlKilrDa6Fg46T/uU8rABdB6Cr0NdZsULicB5M11q/9i13VuwdVNy/USYAxxB3YXCMPyIDlw==; fgsscgib-w-hh=qqPI7914b2fb01c956e8483c68c2cce1d8b506ff; _hi=30572423; __ddg10_=1738441924; __ddg8_=orPo7gVk7TS9PBb2"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://hh.ru/vacancy/116197385?query=QA+engineer&hhtmFrom=vacancy_search_list"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-hhtmfrom",
+						"value": "vacancy_search_list"
+					},
+					{
+						"key": "x-hhtmsource",
+						"value": "vacancy"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "x-xsrftoken",
+						"value": "590a367477fcd143324b6672533add17"
+					}
+				],
+				"url": {
+					"raw": "https://hh.ru/shards/vacancy/related_vacancies?vacancyId=116197385&page=1&searchSessionId=12334df0-951c-4cd1-ba19-ab4fee42d9fc",
+					"protocol": "https",
+					"host": [
+						"hh",
+						"ru"
+					],
+					"path": [
+						"shards",
+						"vacancy",
+						"related_vacancies"
+					],
+					"query": [
+						{
+							"key": "vacancyId",
+							"value": "116197385"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "searchSessionId",
+							"value": "12334df0-951c-4cd1-ba19-ab4fee42d9fc"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl 'https://hh.ru/shards/vacancy/related_vacancies?vacancyId=116197385&page=1&searchSessionId=12334df0-951c-4cd1-ba19-ab4fee42d9fc' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'accept-language: en-US,en;q=0.9,ru;q=0.8' \\\r\n  -H 'cookie: hhuid=1SaTcDDygy74GWXgTG8yeQ--; _ym_uid=1709198450631137211; hhtoken=SvSTpicIFGYmWC4RJYFXPk4Faxih; hhul=6ec196c6702ca247b883cc1557b5f0bf227f8be34a1a3b08a16107e78cc282e0; _ym_d=1728997820; __ddg9_=166.1.20.245; __ddg1_=hle2XcarD1xFHROfKzhC; _xsrf=590a367477fcd143324b6672533add17; regions=1; region_clarified=NOT_SET; display=desktop; crypted_hhuid=EE37C05B75F025FA094B0899DE90ADAB494E732BBEB87503476A6548C8962E2F; GMT=3; iap.uid=6dcde9cab32847b089a39cd22eed6a02; tmr_lvid=aef66872cfbf6e7d63e30b50c2ce05f7; tmr_lvidTS=1738441447136; _ym_isad=2; _ym_visorc=w; domain_sid=Bl5YAOPt9enA9wzaOjzsy%3A1738441451512; uxs_uid=d4bd2570-d6e3-11ee-a0f2-539f0230782c; supernova_user_type=applicant; cookie_policy_agreement=true; hhrole=applicant; crypted_id=CFB4365E136D65E22B6801452C0A3F19A5471C6F722104504734B32F0D03E9F8; total_searches=1; __zzatgib-w-hh=MDA0dC0pXB4IH04NIH5rL2R7RSRfHDx1ZS91cDApO2kfYkgWJEhXCHktTEV+clZRPREVbnQpc1xxa05mTGIiRVkKayELUTQ1ZhBKT01HMzg/aH0eVBw5VREPFhI2FyMSfm4rUwsMY0ZCcXYvN1dhMA8WEU1HDTJoUXtMZxUTRkIce3AtLGxzVycyOSdQfyIKay8LFHdwKlELDV4vPV87Xn0wVioTSyk1IBlAZ0pINF0fQUtEIHIzd3QwPm0hY0hhKERZUAghC1VIM1hBEXUmCQs6Lm0tOhlRfRpdehIXQWdST0NdLSJxURR5DiplMy1oIGNNXCJEEAh9J0pFNHBUVDo9Y0NJKjBbP2UjGUdZUzVRP0FaW1Q4NmdBEXUmCQg3LGBwVxlRExpceEdXeiwcGXtvJFcQDF9ASmllbQwtUlFRS2IPHxo0aQteTA==wK4kWw==; tmr_detect=0%7C1738441894039; device_magritte_breakpoint=xs; device_breakpoint=xs; cfidsgib-w-hh=avUXBA9ou6nblJKkcwZEmCY5fEfZ2L5MAx6KveSGvEchqCxou0byV1GLuoDVzHorE9/LdFD1NyAWD1jGEz0fvXk8z9eZ6M+5SuX7rxNVILmQ0hvGyFf8AoturhHa54JMBvf/xKiR+Y60YtTTfVqVddKVr7cadCjMnRU0tA==; gsscgib-w-hh=EEvPhJd7Ar9GOscVHFxyPQWcXZ2I0WkwQ/kiJBbuGRRzHBlSpR/BJSHujoJY3Ig1RdrfhTWpUDPwwgmr4CcvfU1lrlOsvF0k8PDjOU0fMpHE9SrY1Sey1LTDr7taWYWFYmdUpkl9WVIr2V3vJRUnPT1XTucRUzc2En/2ceiAwGV1jgTul6b8HisP3Eygwbi1lPgufGp6NTya8UoKqGx+tH4kxLtrVmzjgbXjOYcTf3Ug2ntCC2Gwjo9GAMXpinV67x8jHNA=; gsscgib-w-hh=Z5DnuQ6zGp1izVaM4aWZlD3cytEJltt8Wtg6m8ow/r2aU3bmC6LCGha/m0HrJvvyk+qW0bO+Re7W7OGeScNCL5h9sHXNA2q0iI/P5sqfgy0mWzhMaB2efcDM08tpq/H0dK38NyT3P9ahqVfpTtNPMroySEXCxn8sOmV0kCMVDKUI6tDQxKYFeBsLjUnAiC7dWlgDHx0pI1h+9pMgB6aZfDPg27OFdkBJwzyHWLRBlpT4kamAX/CcltgsCJQtJl1M/zF7rrE=; cfidsgib-w-hh=hAzFd+ASQYuuUjjLpFNyMKkJCts18rhkyFztaFik2S5w211h9cEUb6sloskmxWBZjdgKqiqEcTZh2KoECGGjIB5yTv19xNDlKilrDa6Fg46T/uU8rABdB6Cr0NdZsULicB5M11q/9i13VuwdVNy/USYAxxB3YXCMPyIDlw==; fgsscgib-w-hh=qqPI7914b2fb01c956e8483c68c2cce1d8b506ff; _hi=30572423; __ddg10_=1738441924; __ddg8_=orPo7gVk7TS9PBb2' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://hh.ru/vacancy/116197385?query=QA+engineer&hhtmFrom=vacancy_search_list' \\\r\n  -H 'sec-ch-ua: \"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-origin' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' \\\r\n  -H 'x-hhtmfrom: vacancy_search_list' \\\r\n  -H 'x-hhtmsource: vacancy' \\\r\n  -H 'x-requested-with: XMLHttpRequest' \\\r\n  -H 'x-xsrftoken: 590a367477fcd143324b6672533add17'"
+			},
+			"response": []
+		}
+	]
+}

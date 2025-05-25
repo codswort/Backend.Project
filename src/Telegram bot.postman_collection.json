@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "1443c16c-9a9c-4ff8-be8a-5c878d524dae",
+		"name": "Telegram bot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41619962"
+	},
+	"item": [
+		{
+			"name": "Получить информацию о боте",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// var jsonData = pm.response.json();\r",
+							"// pm.collectionVariables.set(\"chat_id\", jsonData.result.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/{{token}}/getMe",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"{{token}}",
+						"getMe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение user_id и chat_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.collectionVariables.set(\"user_id\", jsonData.result[0].message.from.id);\r",
+							"pm.collectionVariables.set(\"chat_id\", jsonData.result[0].message.chat.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{token}}/getUpdates",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{token}}",
+						"getUpdates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка сообщения от бота",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/{{token}}/sendMessage?chat_id={{user_id}}&text=Привет",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"{{token}}",
+						"sendMessage"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{user_id}}"
+						},
+						{
+							"key": "text",
+							"value": "Привет"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка фотографии",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo",
+							"value": "https://sun9-87.userapi.com/impg/4BL5nsy-gMJ7V6xiPtrY0k8js1lU2k-t3XeAtA/U2DYcmLPn84.jpg?size=569x462&quality=96&sign=e81ce5770ed6e32efb09107cee7dc244&type=album",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot{{token}}/sendPhoto?chat_id={{chat_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{token}}",
+						"sendPhoto"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chat_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка PDF файла",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"value": "https://islamdag.ru/sites/default/files/books/rasskaji_mne_ob_islame.pdf",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot{{token}}/sendDocument?chat_id={{chat_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{token}}",
+						"sendDocument"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chat_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка DOCX файла",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "postman-cloud:///1efe15b1-de73-4560-ad62-404a0a26cb67"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot{{token}}/sendDocument?chat_id={{chat_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{token}}",
+						"sendDocument"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chat_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение фотографии",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{token}}/getUserProfilePhotos?user_id={{user_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{token}}",
+						"getUserProfilePhotos"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "{{user_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "6687004983:AAFHKnDDXVgYYOfhW960Q7tK-qSbyteGmMk",
+			"type": "string"
+		},
+		{
+			"key": "user_id",
+			"value": ""
+		},
+		{
+			"key": "chat_id",
+			"value": ""
+		}
+	]
+}
