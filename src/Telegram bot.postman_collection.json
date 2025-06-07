@@ -289,7 +289,7 @@
 	"variable": [
 		{
 			"key": "token",
-			"value": "6687004983:AAFHKnDDXVgYYOfhW960Q7tK-qSbyteGmMk",
+			"value": "", // добавить токен телеграм бота
 			"type": "string"
 		},
 		{
